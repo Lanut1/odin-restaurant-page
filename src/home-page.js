@@ -1,14 +1,13 @@
-import myImage from './plates.jpg';
 import { renderAboutPage } from './about-page';
 
 function renderHomePage() {
     const contentSection = document.querySelector("#content");
     contentSection.replaceChildren();
 
-    const backgroundImage = document.createElement("img");
-    backgroundImage.src = myImage;
-    backgroundImage.classList.add("background-image");
-    contentSection.appendChild(backgroundImage);
+    const mainHeader = document.querySelector("header");
+    mainHeader.classList.remove("background");
+
+    document.body.classList.add("fullBackground");
 
     const infoHeader = document.createElement("div");
     infoHeader.classList.add("info-header");
